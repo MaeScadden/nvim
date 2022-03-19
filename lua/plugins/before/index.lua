@@ -1,0 +1,5 @@
+require "plugins/before/colorizer"
+require "plugins/before/coq"
+require "plugins/before/vim-ultest"
+require "plugins/before/nnn"
+require "plugins/before/dracula"
