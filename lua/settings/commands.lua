@@ -11,11 +11,11 @@ vim.cmd [[
 
   augroup END
 
-  " augroup REMEMBER_FOLDS 
-  "   autocmd!
-  "   autocmd BufWinLeave *.* mkview
-  "   autocmd BufWinEnter *.* silent! loadview
-  " augroup END
+  augroup REMEMBER_FOLDS 
+    autocmd!
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+  augroup END
 
   " --- FUNCTIONS --- "
 

@@ -6,12 +6,12 @@ local coq                 = require "coq"
 
 pretty_diagnostics.Use()
 
-
 for _, server in pairs({
   "eslint",
   "pyright",
   "tailwindcss",
   "tsserver",
+  "rust_analyzer",
 }) do
   local config = require ("lsp/servers/" .. server)
   lsp_config[server].setup(coq.lsp_ensure_capabilities(config))

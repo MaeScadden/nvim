@@ -1,1 +1,0 @@
-require "custom/test/index"
