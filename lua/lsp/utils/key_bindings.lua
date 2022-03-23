@@ -27,6 +27,8 @@ local function Use(client, bufnr)
 
   map("n", "<Left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
   map("n", "<Right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+  map("n", ".", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+  map("n", ",", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
   -- map("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
   -- map("n", "<leader>F", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
