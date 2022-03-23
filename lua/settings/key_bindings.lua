@@ -29,14 +29,27 @@ set({"i"}, "<A-k>", "<Esc>:m .-2<CR>==gi")
 set({"n"}, "<A-j>", ":m .+1<CR>==")
 set({"i"}, "<A-j>", "<Esc>:m .+1<CR>==gi")
 
+
+set({"n"}, "<S-h>", "Hzz")
+set({"n"}, "<S-l>", "Lzz")
+
 -- quick jump between windows
 set({"n"}, "<C-h>", "<C-W>h")
 set({"n"}, "<C-j>", "<C-W>j")
 set({"n"}, "<C-k>", "<C-W>k")
 set({"n"}, "<C-l>", "<C-W>l")
 
+-- change size of window
+set({"n"}, "<A-h>",  "5<C-w><")
+set({"n"}, "<A-j>",  "5<C-w>+")
+set({"n"}, "<A-k>",  "5<C-w>-")
+set({"n"}, "<A-l>",  "5<C-w>>")
+
+-- open neogit
+set({"n"}, "<leader>q", ":Neogit<cr>")
+
 -- quick jsdoc generate
-set({"n"}, "<A-;>", ":Neogen<CR>")
+set({"n"}, "<leader>;", ":Neogen<CR>")
 set({"n"}, "<leader>o", ":vsplit ~/todo<CR>")
 
 -- multi cursor on ctrl d (:h visual-multi)

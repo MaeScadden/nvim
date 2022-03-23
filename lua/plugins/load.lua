@@ -12,7 +12,12 @@ return require('packer').startup(function(use)
 
   use {
     "TimUntersberger/neogit",
-    requires = "nvim-lua/plenary.nvim"
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      local neogit = require('neogit')
+
+      neogit.setup {}
+    end
   }
 
   use {
@@ -81,6 +86,7 @@ return require('packer').startup(function(use)
                                
   use "dracula/vim"
   use "morhetz/gruvbox"
+  -- use "ellisonleao/gruvbox.nvim"
 
   -- change background color depending on the vim mode you are in
   use "mvllow/modes.nvim"
@@ -159,6 +165,8 @@ return require('packer').startup(function(use)
     end
   }
 
+  use "stevearc/dressing.nvim"
+
 --  _____ _ _         ___     _____         _     ____                      _     
 -- |  ___(_) | ___   ( _ )   |_   _|____  _| |_  / ___|  ___  __ _ _ __ ___| |__  
 -- | |_  | | |/ _ \  / _ \/\   | |/ _ \ \/ / __| \___ \ / _ \/ _` | '__/ __| '_ \ 
@@ -172,12 +180,17 @@ return require('packer').startup(function(use)
     requires = "nvim-lua/plenary.nvim"
   }
 
-  -- open with ctrl e
-  -- use "mcchrish/nnn.vim"
+  --- nnn file picker
+  use "mcchrish/nnn.vim"
 
   use "ryanoasis/vim-devicons"
   use "preservim/nerdtree"
 
+  -- open with ctrl e
+  -- vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NnnPicker<cr>", {
+  --   noremap = true,
+  --   silent = true
+  -- })
   vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NERDTree<cr>", {
     noremap = true,
     silent = true

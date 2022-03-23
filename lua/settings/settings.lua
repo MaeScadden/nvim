@@ -18,7 +18,7 @@ opt.timeoutlen      = 500
 
 opt.syntax          = "on"
 opt.encoding        = "UTF-8"
-opt.signcolumn      = "number"
+opt.signcolumn      = "yes"
 opt.foldmethod      = "manual"
 opt.clipboard       = "unnamedplus"
 opt.matchpairs      = "(:),{:},[:],<:>"
