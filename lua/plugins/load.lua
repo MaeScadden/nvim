@@ -27,21 +27,7 @@ return require('packer').startup(function(use)
 -- |___/ .__/|_|_|\__|___/
 --     |_|                
 
-  use {
-    "sunjon/shade.nvim",
-    config = function()
-      local shade = require "shade"
-      shade.setup({
-        overlay_opacity = 50,
-        opacity_step = 1,
-        keys = {
-          brightness_up    = "<A-Up>",
-          brightness_down  = "<A-Down>",
-          toggle           = "<Leader>s",
-        }
-      })
-    end
-  }
+
 
 --                  _       _     _                           _          
 --  _ __ ___   __ _| |_ ___| |__ (_)_ __   __ _   _ __   __ _(_)_ __ ___ 
