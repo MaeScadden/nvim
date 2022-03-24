@@ -202,6 +202,9 @@ return require('packer').startup(function(use)
     requires = "nvim-lua/plenary.nvim"
   }
 
+  -- lightspeed vim, press s, and type the two keys where you want to go, (or if there is a repeated pattern, two keys and 1..9)
+  use "ggandor/lightspeed.nvim"
+
 --  _            _   _             
 -- | |_ ___  ___| |_(_)_ __   __ _ 
 -- | __/ _ \/ __| __| | '_ \ / _` |
