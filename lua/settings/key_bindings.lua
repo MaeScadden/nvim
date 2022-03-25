@@ -40,10 +40,10 @@ set({"n"}, "<C-k>", "<C-W>k")
 set({"n"}, "<C-l>", "<C-W>l")
 
 -- change size of window
-set({"n"}, "<A-h>",  "5<C-w><")
-set({"n"}, "<A-j>",  "5<C-w>+")
-set({"n"}, "<A-k>",  "5<C-w>-")
-set({"n"}, "<A-l>",  "5<C-w>>")
+set({"n"}, "<A-S-h>",  "5<C-w><")
+set({"n"}, "<A-S-j>",  "5<C-w>+")
+set({"n"}, "<A-S-k>",  "5<C-w>-")
+set({"n"}, "<A-S-l>",  "5<C-w>>")
 
 -- open neogit
 set({"n"}, "<leader>q", ":Neogit<cr>")

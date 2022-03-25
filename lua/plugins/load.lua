@@ -223,5 +223,4 @@ return require('packer').startup(function(use)
       require("nvim-dap-virtual-text").setup()
     end
   }
-
 end)
