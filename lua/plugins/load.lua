@@ -21,6 +21,14 @@ return require('packer').startup(function(use)
   }
 
   use {
+    "APZelos/blamer.nvim",
+    config = function()
+    vim.g.blamer_enabled = 1
+    vim.g.blamer_delay = 0
+    end
+  }
+
+  use {
     "lewis6991/gitsigns.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
@@ -155,6 +163,8 @@ return require('packer').startup(function(use)
   -- graphql highlighting
   use "jparise/vim-graphql"
 
+  -- use "OmniSharp/omnisharp-vim"
+
   -- tailwind css colors
   use {
     "themaxmarchuk/tailwindcss-colors.nvim",
@@ -184,17 +194,17 @@ return require('packer').startup(function(use)
   use "mcchrish/nnn.vim"
 
   use "ryanoasis/vim-devicons"
-  use "preservim/nerdtree"
+  -- use "preservim/nerdtree"
 
   -- open with ctrl e
-  -- vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NnnPicker<cr>", {
-  --   noremap = true,
-  --   silent = true
-  -- })
-  vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NERDTree<cr>", {
+  vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NnnPicker %<cr>", {
     noremap = true,
     silent = true
   })
+  -- vim.api.nvim_set_keymap("n", "<c-e>", "<cmd>NERDTree<cr>", {
+  --   noremap = true,
+  --   silent = true
+  -- })
 
   -- global replace of text, really, all this is is a gui sed
   use {
@@ -206,6 +216,7 @@ return require('packer').startup(function(use)
   use "ggandor/lightspeed.nvim"
 
 --  _            _   _             
+
 -- | |_ ___  ___| |_(_)_ __   __ _ 
 -- | __/ _ \/ __| __| | '_ \ / _` |
 -- | ||  __/\__ \ |_| | | | | (_| |
@@ -223,4 +234,5 @@ return require('packer').startup(function(use)
       require("nvim-dap-virtual-text").setup()
     end
   }
+
 end)

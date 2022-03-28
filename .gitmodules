@@ -3,4 +3,3 @@
 	url = https://github.com/microsoft/vscode-node-debug2.git
 [submodule "debug/vscode-go"]
 	path = debug/vscode-go
-	url = https://github.com/golang/vscode-go

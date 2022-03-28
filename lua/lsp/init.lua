@@ -12,6 +12,9 @@ for _, server in pairs({
   "tailwindcss",
   "tsserver",
   "rust_analyzer",
+  -- "omnisharp"
+  "csharp_ls",
+  "terraformls",
 }) do
   local config = require ("lsp/servers/" .. server)
   lsp_config[server].setup(coq.lsp_ensure_capabilities(config))

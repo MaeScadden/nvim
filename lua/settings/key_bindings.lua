@@ -55,8 +55,13 @@ set({"n"}, "<leader>o", ":vsplit ~/todo<CR>")
 -- multi cursor on ctrl d (:h visual-multi)
 set({"n"}, "<C-d>", "<C-n>")
 
+set({"n"}, "<leader>l", ":call NumberToggle()<CR>")
+
 -- toggle hard mode (forces you to not use hjkl so much)
 set({"n"}, "<leader>h", "<Esc>:call ToggleHardMode()<CR>")
+
+-- open notes
+set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
 
 -- when you have the quickfix list window open, press dd to delete the item from the list
 vim.cmd [[
@@ -71,4 +76,12 @@ vim.cmd [[
 
   :command! RemoveQFItem :call RemoveQFItem()
   autocmd FileType qf map <buffer> dd :RemoveQFItem<cr>
+  
+  function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+  endfunction
 ]]
