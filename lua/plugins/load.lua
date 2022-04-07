@@ -12,20 +12,23 @@ return require('packer').startup(function(use)
 
   use {
     "TimUntersberger/neogit",
-    requires = "nvim-lua/plenary.nvim",
+    requires = { 
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim' 
+    },
     config = function()
       local neogit = require('neogit')
 
-      neogit.setup {}
+      neogit.setup {
+        integrations = {
+          diffview = true
+        },
+      }
     end
   }
 
   use {
-    "APZelos/blamer.nvim",
-    config = function()
-    vim.g.blamer_enabled = 1
-    vim.g.blamer_delay = 0
-    end
+    "tpope/vim-fugitive"
   }
 
   use {
@@ -40,7 +43,12 @@ return require('packer').startup(function(use)
 -- |___/ .__/|_|_|\__|___/
 --     |_|                
 
-
+use {
+  "beauwilliams/focus.nvim",
+  config = function()
+    require("focus").setup()
+  end
+}
 
 --                  _       _     _                           _          
 --  _ __ ___   __ _| |_ ___| |__ (_)_ __   __ _   _ __   __ _(_)_ __ ___ 

@@ -32,6 +32,8 @@ set({"i"}, "<A-j>", "<Esc>:m .+1<CR>==gi")
 
 set({"n"}, "<S-h>", "Hzz")
 set({"n"}, "<S-l>", "Lzz")
+set({"v"}, "<S-l>", "Lzz")
+set({"v"}, "<S-l>", "Lzz")
 
 -- quick jump between windows
 set({"n"}, "<C-h>", "<C-W>h")

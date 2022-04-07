@@ -23,7 +23,7 @@ opt.foldmethod      = "manual"
 opt.clipboard       = "unnamedplus"
 opt.matchpairs      = "(:),{:},[:],<:>"
 
-opt.splitright       = true
+opt.splitright      = true
 opt.expandtab       = true
 opt.showmatch       = true
 opt.ignorecase      = true
