@@ -10,28 +10,11 @@ return require('packer').startup(function(use)
 --  \__, |_|\__|
 --  |___/       
 
-  use {
-    "TimUntersberger/neogit",
-    requires = { 
-      'nvim-lua/plenary.nvim',
-      'sindrets/diffview.nvim' 
-    },
-    config = function()
-      local neogit = require('neogit')
-
-      neogit.setup {
-        integrations = {
-          diffview = true
-        },
-      }
-    end
-  }
-
-  use {
+  use { -- for the :G blame
     "tpope/vim-fugitive"
   }
 
-  use {
+  use { -- for the git signs
     "lewis6991/gitsigns.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
@@ -63,24 +46,6 @@ use {
   -- color pairs, (like rainbow colorizer from vscode)
   use "norcalli/nvim-colorizer.lua"
 
-  -- smart pairs, autocomplete <,(,[,{
-  -- use {
-  --   "ZhiyuanLck/smart-pairs",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("pairs"):setup()
-  --   end
-  -- }
-
---  __  __       _ _   _    ____                          
--- |  \/  |_   _| | |_(_)  / ___|   _ _ __ ___  ___  _ __ 
--- | |\/| | | | | | __| | | |  | | | | '__/ __|/ _ \| '__|
--- | |  | | |_| | | |_| | | |__| |_| | |  \__ \ (_) | |   
--- |_|  |_|\__,_|_|\__|_|  \____\__,_|_|  |___/\___/|_|   
-
-  -- use ctrl + <up, down> to add another cursor
-  use "mg979/vim-visual-multi"
-
 --      _        _               _ _            
 --  ___| |_ __ _| |_ _   _ ___  | (_)_ __   ___ 
 -- / __| __/ _` | __| | | / __| | | | '_ \ / _ \
@@ -100,25 +65,8 @@ use {
 -- | |_| | | |  __/ | | | | |  __/
 --  \__|_| |_|\___|_| |_| |_|\___|
                                
-  use "dracula/vim"
   use "morhetz/gruvbox"
-  -- use "ellisonleao/gruvbox.nvim"
-
-  -- change background color depending on the vim mode you are in
-  use "mvllow/modes.nvim"
-
---      _                                       _        _   _             
---   __| | ___   ___ _   _ _ __ ___   ___ _ __ | |_ __ _| |_(_) ___  _ __  
---  / _` |/ _ \ / __| | | | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
--- | (_| | (_) | (__| |_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
---  \__,_|\___/ \___|\__,_|_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-                                                                        
-  -- use <leader>+; to auto generate when hovering over a function or class
-  -- or use :Neogen
-  use {
-    "danymat/neogen",
-     requires = "nvim-treesitter/nvim-treesitter",
-  }
+  use "mvllow/modes.nvim" -- change background color depending on the vim mode you are in
 
 --  _                                             
 -- | |    __ _ _ __   __ _ _   _  __ _  __ _  ___ 
@@ -168,11 +116,6 @@ use {
   -- rust support, adds :Cargo ... items
   use "rust-lang/rust.vim"
 
-  -- graphql highlighting
-  use "jparise/vim-graphql"
-
-  -- use "OmniSharp/omnisharp-vim"
-
   -- tailwind css colors
   use {
     "themaxmarchuk/tailwindcss-colors.nvim",
@@ -201,7 +144,7 @@ use {
   --- nnn file picker
   use "mcchrish/nnn.vim"
 
-  use "ryanoasis/vim-devicons"
+  -- use "ryanoasis/vim-devicons"
   -- use "preservim/nerdtree"
 
   -- open with ctrl e
@@ -219,28 +162,4 @@ use {
     "windwp/nvim-spectre",
     requires = "nvim-lua/plenary.nvim"
   }
-
-  -- lightspeed vim, press s, and type the two keys where you want to go, (or if there is a repeated pattern, two keys and 1..9)
-  use "ggandor/lightspeed.nvim"
-
---  _            _   _             
-
--- | |_ ___  ___| |_(_)_ __   __ _ 
--- | __/ _ \/ __| __| | '_ \ / _` |
--- | ||  __/\__ \ |_| | | | | (_| |
---  \__\___||___/\__|_|_| |_|\__, |
---                           |___/ 
-
-  -- TODO: set this up
-  -- https://www.reddit.com/r/neovim/comments/silikv/debugging_in_neovim/
-  use "mfussenegger/nvim-dap"
-  use "Pocco81/DAPInstall.nvim"
-  use "rcarriga/nvim-dap-ui"
-  use {
-    "theHamsta/nvim-dap-virtual-text",
-    config = function()
-      require("nvim-dap-virtual-text").setup()
-    end
-  }
-
 end)

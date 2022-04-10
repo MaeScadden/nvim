@@ -47,8 +47,9 @@ set({"n"}, "<A-S-j>",  "5<C-w>+")
 set({"n"}, "<A-S-k>",  "5<C-w>-")
 set({"n"}, "<A-S-l>",  "5<C-w>>")
 
--- open neogit
-set({"n"}, "<leader>q", ":Neogit<cr>")
+-- open git manager
+-- set({"n"}, "<leader>q", ":Neogit<cr>")
+set({"n"}, "<leader>q", ":LazyGit<cr>")
 
 -- quick jsdoc generate
 set({"n"}, "<leader>;", ":Neogen<CR>")
@@ -64,6 +65,11 @@ set({"n"}, "<leader>h", "<Esc>:call ToggleHardMode()<CR>")
 
 -- open notes
 set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
+
+-- TODO move this
+set({"n"}, "<Leader>c", ":RustTest<CR>");
+set({"n"}, "<Leader>f", ":Ctest %<CR>");
+set({"n"}, "<Leader>p", ":Ctest<CR>");
 
 -- when you have the quickfix list window open, press dd to delete the item from the list
 vim.cmd [[
