@@ -22,6 +22,7 @@ opt.signcolumn      = "yes"
 opt.foldmethod      = "manual"
 opt.clipboard       = "unnamedplus"
 opt.matchpairs      = "(:),{:},[:],<:>"
+vim.cmd               "set list listchars+=trail:-,eol:$"
 
 opt.splitright      = true
 opt.expandtab       = true
@@ -41,7 +42,6 @@ opt.hidden          = false
 opt.swapfile        = false
 opt.showmode        = false 
 opt.cursorline      = false
-
 
 -- vim.cmd will run the code as a vimscript
 

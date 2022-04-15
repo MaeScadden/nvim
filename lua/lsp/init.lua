@@ -15,6 +15,7 @@ for _, server in pairs({
   -- "omnisharp"
   "csharp_ls",
   "terraformls",
+  "dartls",
 }) do
   local config = require ("lsp/servers/" .. server)
   lsp_config[server].setup(coq.lsp_ensure_capabilities(config))

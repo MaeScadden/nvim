@@ -128,6 +128,9 @@ use {
 
   use "stevearc/dressing.nvim"
 
+  use "dart-lang/dart-vim-plugin"
+  use "thosakwe/vim-flutter"
+
 --  _____ _ _         ___     _____         _     ____                      _     
 -- |  ___(_) | ___   ( _ )   |_   _|____  _| |_  / ___|  ___  __ _ _ __ ___| |__  
 -- | |_  | | |/ _ \  / _ \/\   | |/ _ \ \/ / __| \___ \ / _ \/ _` | '__/ __| '_ \ 

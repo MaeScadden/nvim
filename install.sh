@@ -85,6 +85,8 @@ attempt "sudo apt-get install python-dev python-pip python3-dev python3-pip"
 attempt "mkdir $HOME/.fonts"
 attempt "mv ./Fira* $HOME/.fonts"
 
+attempt "echo 'FOR OTHER SERVERS BESIDES Javascript: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md'"
+
 # add language servers for vscode, tailwind, and typescript
 attempt "npm install -g vscode-langservers-extracted"
 attempt "npm install -g @tailwindcss/language-server"
@@ -99,24 +101,6 @@ attempt "git clone --depth 1 https://github.com/wbthomason/packer.nvim $PACKER_F
 
 # attempt "cd $CURRENT_DIR/debug"
 # attempt "git submodule update --init ./*"
-
-# # javascript
-# attempt "cd $CURRENT_DIR/debug"
-# attempt "cd vscode-node-debug2"
-# attempt "npm install"
-# attempt "npm run build"
-# 
-# # golang
-# attempt "go install github.com/go-delve/delve/cmd/dlv@latest"
-# attempt "cd $CURRENT_DIR/debug"
-# attempt "cd vscode-go"
-# attempt "npm install"
-# attempt "npm run compile"
-# 
-# attempt "cd $CURRENT_DIR/debug"
-# attempt "echi 'SETUP https://github.com/vadimcn/vscode-lldb.git for rust'"
-# attempt "cd $CURRENT_DIR"
-
 
 attempt "echo 'open nvim and run :PackerSync'"
 
