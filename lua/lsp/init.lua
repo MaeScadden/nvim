@@ -16,6 +16,9 @@ for _, server in pairs({
   "csharp_ls",
   "terraformls",
   "dartls",
+  "terraformls",
+  "tflint",
+  "gopls",
 }) do
   local config = require ("lsp/servers/" .. server)
   lsp_config[server].setup(coq.lsp_ensure_capabilities(config))

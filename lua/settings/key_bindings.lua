@@ -1,18 +1,4 @@
-local set_key = vim.api.nvim_set_keymap
-local options = {
-  -- noremap just makes sure we dont trigger anything else ie if we had this:
-  -- if we do  `noremap j J` 
-  -- and we do `noremap J <some action>`
-  -- pressing: "j" will not trigger the action
-  noremap = true,
-  silent = true
-}
-
-local function set(modes, key, action)
-  for _, mode in ipairs(modes) do
-    set_key(mode, key, action, options)
-  end
-end
+local set = require("utils").set
 
 -- disable arrow keys, learn vim properly
 set({"n", "i", "v"}, "<Up>", "<Nop>")
@@ -65,11 +51,6 @@ set({"n"}, "<leader>h", "<Esc>:call ToggleHardMode()<CR>")
 
 -- open notes
 set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
-
--- TODO move this
-set({"n"}, "<Leader>c", ":RustTest<CR>");
-set({"n"}, "<Leader>f", ":Ctest %<CR>");
-set({"n"}, "<Leader>p", ":Ctest<CR>");
 
 -- when you have the quickfix list window open, press dd to delete the item from the list
 vim.cmd [[

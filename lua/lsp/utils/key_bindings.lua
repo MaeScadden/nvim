@@ -1,3 +1,5 @@
+local set = require("utils").set
+
 -- Mappings.
 local opts = { noremap=true, silent=true }
 
@@ -14,10 +16,16 @@ local function Use(client, bufnr)
   map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
   map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  map("n", "K", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-
+  map("n", "gR", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
   map("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  map("n", "<C-i>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- show information, (show jsdoc info, [var name: type/value]
+
+  -- show information, (show jsdoc info, [var name: typ]
+  -- set({"n"}, "<C-i>", "<cmd>lua vim.lsp.buf.hover()<CR>")
+  map("n", "<A-U>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  map("n", "<space-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  map("n", "<leader>i", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+
   -- map('i', '<C-space>', '<C-x><c-o>', opts)
   -- map('i', '<C-k>', '<cmd>lua vim.lsp.buf.completion()<CR>', opts)
   -- map("n", "<A-i>", ":CodeActionMenu<CR>", opts) -- code actions, (remove, import, fix spelling, etc)

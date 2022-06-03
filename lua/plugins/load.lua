@@ -1,6 +1,23 @@
 return require('packer').startup(function(use)
   -- use :PackerSync
-  use 'wbthomason/packer.nvim'
+  use "wbthomason/packer.nvim"
+
+  -- discord
+  -- use {
+  --   "andweeb/presence.nvim",
+  --   config = function()
+  --     if false then
+  --       require("presence"):setup{
+  --         auto_update         = true,
+  --         neovim_image_text   = "Neovim goddess",
+  --         log_level           = "debug",
+  --         enable_line_number  = false,
+  --         -- client_id           = "",
+  --         workspace_text      = "Working <3",
+  --       }
+  --     end
+  --   end
+  -- }
 
 
 --        _ _   
@@ -126,7 +143,11 @@ use {
     end
   }
 
-  use "stevearc/dressing.nvim"
+  -- use "stevearc/dressing.nvim"
+
+  use {
+    "aspeddro/lsp_menu.nvim"
+  }
 
   use "dart-lang/dart-vim-plugin"
   use "thosakwe/vim-flutter"
