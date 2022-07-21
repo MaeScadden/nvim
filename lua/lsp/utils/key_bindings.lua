@@ -30,8 +30,9 @@ local function Use(client, bufnr)
   -- map('i', '<C-k>', '<cmd>lua vim.lsp.buf.completion()<CR>', opts)
   -- map("n", "<A-i>", ":CodeActionMenu<CR>", opts) -- code actions, (remove, import, fix spelling, etc)
   map("n", "<A-I>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-
   map("n", "<A-i>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+  map("n", "<leader>n", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+  map("n", "<leader>b", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
   map("n", "<Left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
   map("n", "<Right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)

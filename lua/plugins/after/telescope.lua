@@ -30,7 +30,17 @@ require("telescope").setup{
     preview_cutoff = 120,
   },
   -- file_sorter = require("telescope.sorters").get_fuzzy_file,
-  file_ignore_patterns = { "node_modules", ".git" },
+  file_ignore_patterns = {
+    "node_modules",
+    ".git",
+    ".npm",
+    ".apps",
+    "Movies",
+    ".themes",
+    ".zsh_themes",
+    ".angular",
+    "Library",
+  },
   set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
  },
 }

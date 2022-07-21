@@ -18,5 +18,13 @@
 -- set the sign column background to the normal background
 vim.g.gruvbox_sign_column = "bg0"
 vim.g.gruvbox_contrast_dark = "hard"
+
 vim.cmd "colorscheme gruvbox"
+
+vim.cmd [[
+  if has('mac')
+    set termguicolors
+    set notermguicolors
+  endif
+]]
 

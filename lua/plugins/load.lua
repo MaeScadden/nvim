@@ -83,7 +83,7 @@ use {
 --  \__|_| |_|\___|_| |_| |_|\___|
                                
   use "morhetz/gruvbox"
-  use "mvllow/modes.nvim" -- change background color depending on the vim mode you are in
+  -- use "mvllow/modes.nvim" -- change background color depending on the vim mode you are in
 
 --  _                                             
 -- | |    __ _ _ __   __ _ _   _  __ _  __ _  ___ 
@@ -186,4 +186,15 @@ use {
     "windwp/nvim-spectre",
     requires = "nvim-lua/plenary.nvim"
   }
+
+--   _   _ _   _ _ _ _   _           
+--  | | | | |_(_) (_) |_(_) ___  ___ 
+--  | | | | __| | | | __| |/ _ \/ __|
+--  | |_| | |_| | | | |_| |  __/\__ \
+--   \___/ \__|_|_|_|\__|_|\___||___/
+                                  
+ use {
+   "GustavoKatel/tasks.nvim",
+   requires = { "nvim-lua/plenary.nvim" }
+ }
 end)

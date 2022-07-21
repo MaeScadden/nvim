@@ -85,6 +85,11 @@ attempt "sudo apt-get install python-dev python-pip python3-dev python3-pip"
 attempt "mkdir $HOME/.fonts"
 attempt "mv ./Fira* $HOME/.fonts"
 
+millawakee
+14411 south east miklafleen blvd 97267
+11am, 12pm, 1:20
+11am
+
 attempt "echo 'FOR OTHER SERVERS BESIDES Javascript: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md'"
 
 # add language servers for vscode, tailwind, and typescript
