@@ -192,9 +192,35 @@ use {
 --  | | | | __| | | | __| |/ _ \/ __|
 --  | |_| | |_| | | | |_| |  __/\__ \
 --   \___/ \__|_|_|_|\__|_|\___||___/
-                                  
+
  use {
    "GustavoKatel/tasks.nvim",
    requires = { "nvim-lua/plenary.nvim" }
  }
+
+  use {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  }
+
+  use {
+    "https://github.com/anuvyklack/hydra.nvim",
+    config = function()
+      local Hydra = require('hydra')
+
+    Hydra({
+       name = 'Lsp Mode',
+       mode = ';',
+       body = 'z',
+       heads = {
+          { 'h', '5zh' },
+          { 'l', '5zl', { desc = '←/→' } },
+          { 'H', 'zH' },
+          { 'L', 'zL', { desc = 'half screen ←/→' } },
+       }
+    })
+    end
+  }
 end)

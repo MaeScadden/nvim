@@ -20,6 +20,7 @@ for _, server in pairs({
   "tflint",
   "gopls",
   "svelte",
+  "angularls",
 }) do
   local config = require ("lsp/servers/" .. server)
   lsp_config[server].setup(coq.lsp_ensure_capabilities(config))

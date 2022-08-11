@@ -50,7 +50,12 @@ set({"n"}, "<leader>l", ":call NumberToggle()<CR>")
 set({"n"}, "<leader>h", "<Esc>:call ToggleHardMode()<CR>")
 
 -- open notes
-set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
+-- set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
+set({"n"}, "<leader>o", "<cmd>:NnnPicker ~/todo<CR>")
+
+set({"t"}, "<C-leader>", "<C-\\><C-n>")
+set({"t"}, '<C-;>', [[<C-\><C-n>]])
+
 
 -- when you have the quickfix list window open, press dd to delete the item from the list
 vim.cmd [[
