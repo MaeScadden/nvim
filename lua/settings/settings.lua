@@ -38,10 +38,12 @@ opt.wrap            = true
 opt.linebreak       = true
 opt.ruler           = true
 
-opt.hidden          = false 
+opt.hidden          = false
 opt.swapfile        = false
-opt.showmode        = false 
+opt.showmode        = false
 opt.cursorline      = false
+
+vim.g.netrw_banner  = 0
 
 -- vim.cmd will run the code as a vimscript
 

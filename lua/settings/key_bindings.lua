@@ -51,7 +51,7 @@ set({"n"}, "<leader>h", "<Esc>:call ToggleHardMode()<CR>")
 
 -- open notes
 -- set({"n"}, "<leader>o", ":vsplit ~/todo/main.norg<CR>")
-set({"n"}, "<leader>o", "<cmd>:NnnPicker ~/todo<CR>")
+set({"n"}, "<leader>o", "<cmd>:E ~/todo<CR>")
 
 set({"t"}, "<C-leader>", "<C-\\><C-n>")
 set({"t"}, '<C-;>', [[<C-\><C-n>]])
