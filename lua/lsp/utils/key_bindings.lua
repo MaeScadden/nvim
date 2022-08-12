@@ -1,5 +1,3 @@
-local set = require("utils").set
-
 -- Mappings.
 local opts = { noremap=true, silent=true }
 

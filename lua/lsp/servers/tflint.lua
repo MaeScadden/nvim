@@ -1,6 +1,5 @@
-local set = require("utils").set
-local key_bindings = require "lsp/utils/key_bindings"
-local commands = require "lsp/utils/commands"
+local key_bindings = require "lsp.utils.key_bindings"
+local commands = require "lsp.utils.commands"
 
 vim.cmd([[silent! autocmd! filetypedetect BufRead,BufNewFile *.tf]])
 vim.cmd([[autocmd BufRead,BufNewFile *.hcl set filetype=hcl]])

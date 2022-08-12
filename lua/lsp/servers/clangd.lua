@@ -1,5 +1,5 @@
-local key_bindings = require "lsp/utils/key_bindings"
-local commands = require "lsp/utils/commands"
+local key_bindings = require "lsp.utils.key_bindings"
+local commands = require "lsp.utils.commands"
 
 return {
   cmd = {

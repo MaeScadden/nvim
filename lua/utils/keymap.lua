@@ -8,12 +8,10 @@ local options = {
   silent = true
 }
 
-local function set(modes, key, action)
+local function keymap(modes, key, action)
   for _, mode in ipairs(modes) do
     set_key(mode, key, action, options)
   end
 end
 
-return {
-  set = set,
-}
+return keymap
