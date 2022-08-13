@@ -1,4 +1,6 @@
 local key_bindings = require "lsp.utils.key_bindings"
+local tests = require "plugins.mae.modes.test.use"
+local term = require "plugins.mae.term"
 local commands = require "lsp.utils.commands"
 
 return {
@@ -8,6 +10,10 @@ return {
 
     key_bindings.Use(client, bufnr)
     commands.Use()
+
+    tests.project(function()
+      term("npm run test")
+    end)
   end,
   handlers = {
     ["textDocument/definition"] = function(_, result, params)

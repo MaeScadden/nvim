@@ -33,6 +33,8 @@ opt.hidden          = false
 opt.swapfile        = false
 opt.showmode        = false
 opt.cursorline      = false
+
+vim.cmd             "set path+=**"
 vim.cmd             "set list listchars+=trail:-,eol:$"
 vim.cmd             "set formatoptions-=ro"
 vim.cmd             "filetype indent plugin on"

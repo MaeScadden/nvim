@@ -19,12 +19,14 @@ for _, package in pairs({
   require("plugins.configs.lsp_loading_icon"),
   require("plugins.configs.lsp_snippets"),
   require("plugins.configs.lsp_suggestion"),
-  require("plugins.configs.multi_modes"),
   require("plugins.configs.project_find_and_replace"),
   require("plugins.configs.rust_support"),
   require("plugins.configs.tailwind_colorizer"),
   require("plugins.configs.telescope"),
   require("plugins.configs.tree_sitter"),
+  require("plugins.configs.multi_modes"),
 }) do
   use(package)
 end
+
+require "plugins.mae.modes"
