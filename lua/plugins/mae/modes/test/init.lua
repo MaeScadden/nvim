@@ -1,7 +1,7 @@
 local cmd = require('hydra.keymap-util').cmd
 
 local mode = require "plugins.mae.mode"
-local hint = require "plugins.mae.modes.test.hint"
+local hint = require "plugins.mae.modes.git.hint"
 
 local bindings = {
   {"p", require("plugins.mae.modes.test.project").handle },

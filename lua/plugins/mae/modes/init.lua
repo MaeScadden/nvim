@@ -1,5 +1,6 @@
 local modes = {
-  "test"
+  "test",
+  "git"
 }
 
 local Hydra = require "hydra"

@@ -11,7 +11,7 @@ for _, package in pairs({
   require("plugins.configs.utilities"),
   require("plugins.configs.focus"),
   require("plugins.configs.color_theme"),
-  require("plugins.configs.fugitive"),
+  require("plugins.configs.git"),
   require("plugins.configs.gitsigns"),
   require("plugins.configs.hex_code_colorizer"),
   require("plugins.configs.lsp_config"),

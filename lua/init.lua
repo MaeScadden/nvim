@@ -1,5 +1,6 @@
 require "functions.NumberToggle"
 require "functions.FormatJSON"
+require "functions.GitPath"
 require "autocommands.packer"
 require "overrides.netrw"
 require "overrides.quickfixlist"
