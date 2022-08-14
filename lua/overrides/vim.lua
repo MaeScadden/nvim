@@ -32,8 +32,8 @@ opt.ruler           = true
 opt.hidden          = false
 opt.swapfile        = false
 opt.showmode        = false
-opt.cursorline      = false
 
+vim.cmd             "set nocursorline"
 vim.cmd             "set path+=**"
 vim.cmd             "set list listchars+=trail:-,eol:$"
 vim.cmd             "set formatoptions-=ro"

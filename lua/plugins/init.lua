@@ -30,3 +30,4 @@ for _, package in pairs({
 end
 
 require "plugins.mae.modes"
+require "plugins.mae.statusline"
