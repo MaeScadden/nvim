@@ -59,7 +59,7 @@ return {
     vim.api.nvim_set_keymap(
       'n',
       '<C-r>',
-      "<cmd>lua require('telescope.builtin').find_files({cwd=require('telescope.utils').buffer_dir()})<CR>",
+      "<cmd>lua require('telescope.builtin').live_grep({cwd=require('telescope.utils').buffer_dir()})<CR>",
       {}
     )
   end
