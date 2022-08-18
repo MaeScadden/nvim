@@ -15,7 +15,6 @@ opt.signcolumn      = "yes"
 opt.foldmethod      = "manual"
 opt.clipboard       = "unnamedplus"
 opt.matchpairs      = "(:),{:},[:],<:>"
-opt.autochdir       = true
 opt.splitright      = true
 opt.expandtab       = true
 opt.showmatch       = true

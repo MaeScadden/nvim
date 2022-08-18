@@ -1,3 +1,4 @@
+
 return {
   "nvim-telescope/telescope.nvim",
   requires = "nvim-lua/plenary.nvim",
@@ -52,15 +53,54 @@ return {
     vim.api.nvim_set_keymap(
       'n',
       '<C-p>',
-      '<cmd>Telescope find_files find_command=rg,--hidden,--files,--ignore<cr>',
-      {}
+      '',
+      {
+        callback = function()
+          local builtin             = require('telescope.builtin')
+          local update_project_root = require("utils.update_project_root")
+          local get_project_root    = require("utils.get_project_root")
+
+          update_project_root()
+          local root = get_project_root()
+
+          print(("(%s) root `%s`"):format(type(root), root))
+
+          if root == nil then
+            root = require('telescope.utils').buffer_dir()
+          end
+
+          builtin.find_files({
+            cwd = root,
+            hidden = true,
+            files = true,
+            ignore = true
+          })
+        end
+      }
     )
 
     vim.api.nvim_set_keymap(
       'n',
       '<C-r>',
-      "<cmd>lua require('telescope.builtin').live_grep({cwd=require('telescope.utils').buffer_dir()})<CR>",
-      {}
+      "",
+      {
+        callback = function()
+          local builtin             = require('telescope.builtin')
+          local update_project_root = require("utils.update_project_root")
+          local get_project_root    = require("utils.get_project_root")
+
+          update_project_root()
+          local root = get_project_root()
+
+          if root == nil then
+            root = require('telescope.utils').buffer_dir()
+          end
+
+          builtin.live_grep({
+            cwd = root
+          })
+        end
+      }
     )
   end
 }
