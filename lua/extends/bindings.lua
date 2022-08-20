@@ -1,6 +1,9 @@
 local keymap = require "utils/keymap"
 
 local bindings = {
+  -- disable ctrl-[ and ctrl-] as we replace those with H and L 
+  {{"n"}, "<C-[>", "<Nop>"},
+  {{"n"}, "<C-]>", "<Nop>"},
   -- disable arrow keys
   {{"n", "i", "v"}, "<Up>", "<Nop>"},
   {{"n", "i", "v"}, "<Down>", "<Nop>"},
@@ -25,11 +28,9 @@ local bindings = {
   {{"n"}, "<A-S-k>",  "5<C-w>-"},
   {{"n"}, "<A-S-l>",  "5<C-w>>"},
   -- navigation: open netrw in the ~/todo directory
-  {{"n"}, "<leader>o", "<cmd>:E ~/todo<CR>"},
+  {{"n"}, "<leader>o", ":E ~/todo<CR>"},
   -- toggle line numbers, defined in functions.lua
   {{"n"}, "<leader>l", ":call NumberToggle()<CR>"},
-  -- open netrw
-  {{"n"}, '<C-e>', ":Explore<CR>"},
 }
 
 for _, opts in pairs(bindings) do

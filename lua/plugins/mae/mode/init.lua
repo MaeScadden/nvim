@@ -2,7 +2,7 @@ local merge = require "utils.merge"
 local default = require "utils.default"
 
 local default_head = {
-  { "<Esc>", nil, { exit = true, nowait = true } },
+  { "q", nil, { exit = true, nowait = true } },
 }
 
 local default_config = {
