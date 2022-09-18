@@ -1,3 +1,3 @@
 return function()
-  vim.cmd ":Explore<CR>"
+  vim.cmd ":Ex<CR>"
 end

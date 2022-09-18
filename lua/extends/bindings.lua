@@ -28,9 +28,11 @@ local bindings = {
   {{"n"}, "<A-S-k>",  "5<C-w>-"},
   {{"n"}, "<A-S-l>",  "5<C-w>>"},
   -- navigation: open netrw in the ~/todo directory
-  {{"n"}, "<leader>o", ":E ~/todo<CR>"},
+  {{"n"}, "<leader>o", ":Ex ~/todo<CR>"},
   -- toggle line numbers, defined in functions.lua
   {{"n"}, "<leader>l", ":call NumberToggle()<CR>"},
+  -- open :netrw
+  {{"n"}, "<leader>e", ":Ex <CR>"},
 }
 
 for _, opts in pairs(bindings) do

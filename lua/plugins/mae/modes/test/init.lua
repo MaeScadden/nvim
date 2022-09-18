@@ -1,3 +1,4 @@
+local get_project_root = require "utils.get_project_type"
 local cmd = require('hydra.keymap-util').cmd
 
 local mode = require "plugins.mae.mode"
@@ -9,4 +10,4 @@ local bindings = {
   {"s", require("plugins.mae.modes.test.scope").handle },
 }
 
-return mode("n", "<leader>t", hint, bindings, nil)
+return mode("n", "<leader>t", hind, bindings, nil)

@@ -1,5 +1,5 @@
 local function terminal(cmd)
-  vim.cmd('belowright split new')
+  vim.cmd('botright split')
   local win = vim.api.nvim_get_current_win()
   local buf = vim.api.nvim_create_buf(true, true)
   vim.api.nvim_buf_set_option(buf, 'modifiable', true)

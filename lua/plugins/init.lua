@@ -15,7 +15,6 @@ for _, package in pairs({
   require("plugins.configs.gitsigns"),
   require("plugins.configs.hex_code_colorizer"),
   require("plugins.configs.lsp_config"),
-  require("plugins.configs.lsp_diagnostic_lines"),
   require("plugins.configs.lsp_loading_icon"),
   require("plugins.configs.lsp_snippets"),
   require("plugins.configs.lsp_suggestion"),
@@ -24,6 +23,7 @@ for _, package in pairs({
   require("plugins.configs.tailwind_colorizer"),
   require("plugins.configs.telescope"),
   require("plugins.configs.tree_sitter"),
+  require("plugins.configs.angular_ts"),
   require("plugins.configs.multi_modes"),
 }) do
   use(package)
@@ -31,3 +31,5 @@ end
 
 require "plugins.mae.modes"
 require "plugins.mae.statusline"
+require "plugins.mae.api_search"
+require "plugins.mae.interpreter"
