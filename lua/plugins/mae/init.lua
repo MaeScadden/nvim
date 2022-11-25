@@ -1,0 +1,5 @@
+require "plugins.mae.modes"
+require "plugins.mae.statusline"
+require "plugins.mae.api_search"
+require "plugins.mae.interpreter"
+require "plugins.mae.neorew"

@@ -1,5 +1,4 @@
 local packer = require 'packer'
-local use = packer.use
 
 packer.init()
 
@@ -9,7 +8,6 @@ for _, package in pairs({
   {"wbthomason/packer.nvim"},
   require("plugins.configs.project_rooter"),
   require("plugins.configs.utilities"),
-  require("plugins.configs.focus"),
   require("plugins.configs.color_theme"),
   require("plugins.configs.git"),
   require("plugins.configs.gitsigns"),
@@ -25,11 +23,10 @@ for _, package in pairs({
   require("plugins.configs.tree_sitter"),
   require("plugins.configs.angular_ts"),
   require("plugins.configs.multi_modes"),
+  require("plugins.configs.greeter"),
+  require("plugins.configs.harpoon"),
 }) do
-  use(package)
+  packer.use(package)
 end
 
-require "plugins.mae.modes"
-require "plugins.mae.statusline"
-require "plugins.mae.api_search"
-require "plugins.mae.interpreter"
+require "plugins.mae"

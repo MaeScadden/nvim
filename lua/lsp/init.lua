@@ -2,7 +2,7 @@
                             require "lsp.configuration.highlights"
 local lsp_config          = require "lspconfig"
 local pretty_diagnostics  = require "lsp.utils.pretty_diagnostics"
-local coq                 = require "coq"
+local coq  = require "coq"
 
 pretty_diagnostics.Use()
 
@@ -22,7 +22,7 @@ for _, server in pairs({
   "svelte",
   "angularls",
 }) do
-  local config = require ("lsp.servers." .. server)
-  lsp_config[server].setup(coq.lsp_ensure_capabilities(config))
+  local config = require("lsp.servers." .. server)
+  lsp_config[server].setup(config)
 end
 

@@ -1,10 +1,4 @@
-require "functions.NumberToggle"
-require "functions.FormatJSON"
-require "autocommands.packer"
-require "overrides.netrw"
-require "overrides.quickfixlist"
-require "overrides.vim"
-require "extends.bindings"
-
+require "functions"
+require "overrides"
 require "plugins"
 require "lsp"

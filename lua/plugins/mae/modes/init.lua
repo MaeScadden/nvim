@@ -2,6 +2,7 @@ local modes = {
   "test",
   "git",
   "search",
+  "dir_jump",
 }
 
 local Hydra = require "hydra"

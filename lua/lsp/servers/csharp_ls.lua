@@ -4,6 +4,6 @@ local commands = require "lsp.utils.commands"
 return {
   on_attach = function(client, bufnr)
     key_bindings.Use(client, bufnr)
-    commands.Use()
+    commands.Use(true)
   end
 }

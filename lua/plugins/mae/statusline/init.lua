@@ -4,10 +4,10 @@ statusline.setup({
   -- `:h statusline`
   content = {
     active = function()
-      return " %t%=[%v]  "
+      return "%m %t%=[%v]  "
     end,
     inactive = function()
-      return " %t%=[%v]  "
+      return "%m %t%=[%v]  "
     end,
   },
 
