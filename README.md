@@ -1,3 +1,13 @@
-Initial setup for the neovim editor
+# Initial setup for the neovim editor
 
-Please run ./install.sh on a debian based distro
+## setup
+
+### linux
+```sh
+make linux
+```
+
+### mac
+```sh
+make mac
+```

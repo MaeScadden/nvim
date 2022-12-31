@@ -6,7 +6,7 @@ for _, server in pairs({
   -- "tailwindcss",
   "tsserver",
   "rust_analyzer",
-  "csharp_ls",
+  -- "csharp_ls",
   -- "terraformls",
   -- "dartls",
   -- "terraformls",
@@ -14,9 +14,9 @@ for _, server in pairs({
   -- "gopls",
   -- "svelte",
   "angularls",
-  "ocamlls",
+  -- "ocamlls",
   "clangd",
-  "elixirls",
+  -- "elixirls",
 }) do
   local config = require("lsp.servers." .. server)
   require("lspconfig")[server].setup(config)
