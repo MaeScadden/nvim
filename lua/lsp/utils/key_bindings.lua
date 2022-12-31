@@ -5,7 +5,6 @@ local function Use(client, bufnr)
   local function map(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-  vim.cmd "filetype plugin indent on"
   -- Enable completion triggered by <c-x><c-o>
   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -29,8 +28,6 @@ local function Use(client, bufnr)
   -- map("n", "<A-i>", ":CodeActionMenu<CR>", opts) -- code actions, (remove, import, fix spelling, etc)
   map("n", "<A-I>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   map("n", "<A-i>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  map("n", "<leader>n", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-  map("n", "<leader>b", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
   map("n", "<Left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
   map("n", "<Right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)

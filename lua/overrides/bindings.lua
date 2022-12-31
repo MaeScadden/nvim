@@ -4,7 +4,7 @@ local function set_key_binding(modes, key, action)
   for _, mode in ipairs(modes) do
     vim.api.nvim_set_keymap(mode, key, action, {
       noremap = true,
-      silent = true
+      silent = true,
     })
   end
 end
@@ -17,15 +17,17 @@ set_key_binding({"n", "v"}, "<S-h>", "Hzz")
 set_key_binding({"n", "v"}, "<S-l>", "Lzz")
 
 set_key_binding({"n"}, "<S-k>", ":m .-2<CR>==")
-set_key_binding({"i"}, "<S-k>", "<Esc>:m .-2<CR>==gi")
 set_key_binding({"n"}, "<S-j>", ":m .+1<CR>==")
-set_key_binding({"i"}, "<S-j>", "<Esc>:m .+1<CR>==gi")
 
 -- navigation: quick split jump
 set_key_binding({"n"}, "<C-h>", "<C-W>h")
 set_key_binding({"n"}, "<C-j>", "<C-W>j")
 set_key_binding({"n"}, "<C-k>", "<C-W>k")
 set_key_binding({"n"}, "<C-l>", "<C-W>l")
+
+-- navigation: go to mark (set mark with mm)
+set_key_binding({"n", "v"}, "gm", "`Mzz")
+set_key_binding({"n", "v"}, "mm", "mM")
 
 -- toggle line numbers, defined in functions.lua
 set_key_binding({"n"}, "<leader>l", ":call NumberToggle()<CR>")

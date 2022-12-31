@@ -1,54 +1,46 @@
-local key_bindings = require "lsp.utils.key_bindings"
-local tests = require "plugins.mae.modes.test.use"
-local term = require "plugins.mae.term"
-local commands = require "lsp.utils.commands"
+local LspManager = require "lsp.LspManager"
+local once = require "utils.once"
+
+local function handle_to_definition_for_react(_, results, params)
+  local results_are_empty = results == nil or vim.tbl_isempty(results)
+
+  if results_are_empty then
+    local _ = vim.lsp.log.info() and vim.lsp.log.info(
+      params.method,
+      'No location found'
+    )
+
+    return nil
+  end
+
+  local results_are_a_list = vim.tbl_islist(results)
+
+  if results_are_a_list then
+    vim.lsp.util.jump_to_location(results[1])
+
+    if #results > 1 then
+      local isReactDTs = once(function(result, _)
+          return string.match(value.uri, "react/index.d.ts")
+        end)(results)
+
+      if not isReactDTs then
+        vim.lsp.util.set_qflist(util.locations_to_items(results))
+        vim.api.nvim_command("copen")
+        vim.api.nvim_command("wincmd p")
+      end
+    end
+  else
+    vim.lsp.util.jump_to_location(results)
+  end
+end
 
 return {
   on_attach = function(client, bufnr)
-    -- client.resolved_capabilities.document_formatting = false 
-    -- client.resolved_capabilities.document_range_formatting = false
-    client.server_capabilities.document_formatting = false 
-    client.server_capabilities.document_range_formatting = false
-
-    key_bindings.Use(client, bufnr)
-    commands.Use()
-
-    tests.project(function()
-      term("npm run test")
-    end)
+    local manager = LspManager:new(client, bufnr)
+    manager:setup({ formatting = false })
+    manager:disable_default_formatting()
   end,
   handlers = {
-    ["textDocument/definition"] = function(_, result, params)
-      if result == nil or vim.tbl_isempty(result) then
-        local _ = vim.lsp.log.info() and vim.lsp.log.info(
-          params.method,
-          'No location found'
-        )
-        return nil
-      end
-
-      if vim.tbl_islist(result) then
-        vim.lsp.util.jump_to_location(result[1])
-
-        if #result > 1 then
-          local isReactDTs = false
-
-          for key, value in pairs(result) do
-            if string.match(value.uri, "react/index.d.ts") then
-              isReactDTs = true
-			      break
-            end
-          end
-          
-          if not isReactDTs then
-            vim.lsp.util.set_qflist(util.locations_to_items(result))
-            vim.api.nvim_command("copen")
-            vim.api.api.nvim_command("wincmd p")
-          end
-        end
-      else
-         vim.lsp.util.jump_to_location(result)
-      end
-    end
+    ["textDocument/definition"] = handle_to_definition_for_react
   }
 }

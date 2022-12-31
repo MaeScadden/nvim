@@ -45,6 +45,8 @@ return {
           ".angular",
           ".cache",
           "Library",
+          ".o",
+          "main.dSYM"
         },
         set_env = { ["COLORTERM"] = "truecolor" },
        },

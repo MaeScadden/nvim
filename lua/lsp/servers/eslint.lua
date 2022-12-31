@@ -1,14 +1,19 @@
-local key_bindings = require "lsp.utils.key_bindings"
-local commands = require "lsp.utils.commands"
+local LspManager = require "lsp.LspManager"
 
-return {
- on_attach = function(client, bufnr)
-    key_bindings.Use(client, bufnr)
-    vim.cmd([[
+local function format_on_save()
+  vim.cmd([[
     augroup EslintCommands
        autocmd!
        autocmd BufWritePre * ++nested EslintFixAll
     augroup END
-    ]])
+  ]])
+end
+
+return {
+ on_attach = function(client, bufnr)
+    local manager = LspManager:new(client, bufnr)
+    manager:setup({ formatting = false })
+
+    format_on_save()
  end
 }
