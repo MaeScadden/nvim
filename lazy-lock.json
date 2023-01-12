@@ -1,0 +1,5 @@
+{
+  "kanagawa.nvim": { "branch": "master", "commit": "476eb2289d47d132ebacc1a4d459e3204866599b" },
+  "lazy.nvim": { "branch": "main", "commit": "0741d6231917ef77cd5f69a9b1aacc402a676dd1" },
+  "nvim-treesitter-angular": { "branch": "master", "commit": "53d55ba0473c3ac58e25ce3d016a0409481c645c" }
+}
