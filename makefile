@@ -57,7 +57,7 @@ font:
 
 language_servers:
 	# tsserver
-	npm install -g typescript typescript-language-server
+	npm i -g typescript typescript-language-server
 	# eslint
 	npm i -g vscode-langservers-extracted
 	# angularls

@@ -39,6 +39,7 @@ opt.ruler           = true
 opt.hidden          = false
 opt.swapfile        = false
 opt.showmode        = false
+opt.mouse           = nil
 
 vim.cmd             "set nocursorline"
 vim.cmd             "set path+=**"
