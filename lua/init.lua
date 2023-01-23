@@ -1,8 +1,12 @@
--- TODO: fix
+require "au"
+require "defaults"
+require "netrw"
+require "vim_keymaps"
 require "functions"
-require "overrides"
--- TODO: fix
 require "plugins"
+require "search"
+require "lsp"
+require "syntax"
 
 --[[
 require "functions"

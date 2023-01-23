@@ -1,4 +1,5 @@
-vim.api.nvim_create_user_command("Man", function(arg)
+-- vim.api.nvim_create_user_command("Man", function(arg)
+  --[[
   local item = arg.fargs[2]
 
   if item == nil then
@@ -12,4 +13,5 @@ vim.api.nvim_create_user_command("Man", function(arg)
   })
 
   vim.cmd(":e" .. result)
-end, {})
+  --]]
+-- end, {})

@@ -1,4 +1,5 @@
 require "lsp.ui"
+-- require "coq"
 
 for _, server in pairs({
   "eslint",
@@ -6,6 +7,7 @@ for _, server in pairs({
   -- "tailwindcss",
   "tsserver",
   "rust_analyzer",
+  "java_language_server",
   -- "csharp_ls",
   -- "terraformls",
   -- "dartls",

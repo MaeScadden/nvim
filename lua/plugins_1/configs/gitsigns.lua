@@ -1,4 +1,4 @@
-return { -- for the git signs
+return {
   "lewis6991/gitsigns.nvim",
   requires = "nvim-lua/plenary.nvim",
   config = function()

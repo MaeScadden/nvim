@@ -1,5 +1,0 @@
-return {
-  install = {
-    colorscheme = { "kanagawa" }
-  }
-}

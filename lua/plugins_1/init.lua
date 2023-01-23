@@ -12,6 +12,7 @@ for _, package in pairs({
   require("plugins.configs.git"),
   require("plugins.configs.gitsigns"),
   require("plugins.configs.hex_code_colorizer"),
+
   require("plugins.configs.lsp_config"),
   require("plugins.configs.lsp_loading_icon"),
   require("plugins.configs.lsp_snippets"),

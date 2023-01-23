@@ -54,7 +54,8 @@ function M:map(lhs, rhs, opts)
 end
 
 function M:completion_menu()
-  vim.api.nvim_buf_set_option(self._buffer, "omnifunc", "v:lua.vim.lsp.omnifunc")
+  vim.api.nvim_buf_set_option(self._buffer, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  -- self:map("<C-space>", "<C-X><C-O>")
 end
 
 function M:goto()
@@ -66,10 +67,12 @@ function M:goto()
   self:map("gD", "<cmd>lua vim.lsp.buf.declaration()<cr>")
   self:map("<Left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
   self:map("<Right>", "<cmd>lua vim.diagnostic.goto_next()<CR>")
+  self:map("<C-p>", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
+  self:map("<C-n>", "<cmd>lua vim.diagnostic.goto_next()<CR>")
 end
 
 function M:rename()
-  self:map("<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>")
+  self:map("<leader>R", "<cmd>lua vim.lsp.buf.rename()<cr>")
 end
 
 function M:documentation()
