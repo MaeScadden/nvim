@@ -11,7 +11,7 @@ linux:
 	# needed for coq
 	sudo apt install python3-venv -y
 	# lazy git
-	./scripts/lazy_git.sh
+	./scripts/lazygit.sh
 
 	# predone makes
 	$(MAKE) font
@@ -26,14 +26,13 @@ mac:
 	brew install python
 	brew install python3
 	# lazy git
-	./scripts/lazy_git.sh
+	./scripts/lazygit.sh
 	# needed for coq?
 	# python3-venv
 	# predone makes
 	$(MAKE) font
 	$(MAKE) languages
 	$(MAKE) language_servers
-	$(MAKE) headless_nvim_steps
 
 headless_nvim_steps:
 	echo 'Run these commands in neovim'

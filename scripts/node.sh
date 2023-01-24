@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 if [[ $OSTYPE == 'darwin'* ]]; then
   # RUST_ANALYZER_GZ='rust-analyzer-aarch64-apple-darwin.gz'
