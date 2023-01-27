@@ -17,7 +17,7 @@ linux:
 	$(MAKE) font
 	$(MAKE) languages
 	$(MAKE) language_servers
-	$(MAKE) headless_nvim_steps
+	$(MAKE) tree_sitter_servers
 
 mac:
 	# install brew
@@ -30,15 +30,18 @@ mac:
 	# needed for coq?
 	# python3-venv
 	# predone makes
-	$(MAKE) font
 	$(MAKE) languages
 	$(MAKE) language_servers
+	$(MAKE) tree_sitter_servers
+
+tree_sitter_servers:
+	echo 'Please run'
+	echo ':TSInstall cmake markdown typescript javascript python rust html lua bash json gitignore c tsx vim yaml'
 
 headless_nvim_steps:
 	echo 'Run these commands in neovim'
 	echo ':PackerSync'
 	echo ':COQdeps'
-	echo ':TSInstall cmake markdown typescript javascript python rust html lua bash json gitignore c tsx vim yaml'
 
 languages:
 	# node js
