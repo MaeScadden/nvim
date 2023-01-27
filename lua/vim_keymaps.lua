@@ -15,7 +15,7 @@ map("v", "gm", "`Mzz")
 map("n", "mm", "mM")
 map("v", "mm", "mM")
 map("n", "<leader>e", ":Exp<CR>")
-map("n", "<leader>o", ":e ~/todo/_todo<CR>")
+map("n", "<leader>o", ":e ~/.todo/_todo<CR>")
 map("n", "<leader>l", "", function()
   local flag = vim.opt.relativenumber._value
   -- vim.opt.norelativenumber = flag
