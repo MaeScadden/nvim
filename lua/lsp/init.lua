@@ -3,7 +3,7 @@ require "lsp.ui"
 
 for _, server in pairs({
   "eslint",
-  -- "pyright",
+  "pyright",
   -- "tailwindcss",
   "tsserver",
   "rust_analyzer",

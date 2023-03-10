@@ -1,5 +1,12 @@
-local function map(mode, lhs, rhs, callback)
-  vim.keymap.set(mode, lhs, rhs, opts, { noremap = true, silent = true, callback = callback })
+local function map(mode, lhs, rhs)
+  local opts = { noremap = true, silent = true };
+
+  if type(rhs) == "function" then
+    vim.keymap.set(mode, lhs, rhs, opts)
+    return
+  end
+
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 map("n", "<C-h>", "<C-W>h")
@@ -16,9 +23,11 @@ map("n", "mm", "mM")
 map("v", "mm", "mM")
 map("n", "<leader>e", ":Exp<CR>")
 map("n", "<leader>o", ":e ~/.todo/_todo<CR>")
-map("n", "<leader>l", "", function()
-  local flag = vim.opt.relativenumber._value
-  -- vim.opt.norelativenumber = flag
-  vim.opt.relativenumber = not flag
-  print(vim.inspect({flag = flag}))
+map("n", "<leader>l", function()
+  if vim.opt.relativenumber then
+    vim.cmd "set norelativenumber"
+    return
+  end
+
+  vim.cmd "set relativenumber"
 end)

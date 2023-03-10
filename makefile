@@ -58,6 +58,8 @@ font:
 	cp ./fonts/* $(HOME)/.fonts
 
 language_servers:
+	# pyright
+	npm i -g pyright
 	# tsserver
 	npm i -g typescript typescript-language-server
 	# eslint
